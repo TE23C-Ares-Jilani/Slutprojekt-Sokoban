@@ -5,13 +5,17 @@ using Raylib_cs;
 Raylib.InitWindow(800, 600, "Simple Frogger");
 Raylib.SetTargetFPS(60);
 
+List<int> lanes = [150, 230, 310, 390];
+
+
 Player frog = new Player();
 
-    frog.PosX = 375;
-    frog.PosY = 550;
+frog.PosX = 375;
+frog.PosY = 550;
 
 while (!Raylib.WindowShouldClose())
 {
+
 
     Raylib.ClearBackground(Color.Black);
 
@@ -19,7 +23,7 @@ while (!Raylib.WindowShouldClose())
 
     frog.update();
 
-    Raylib.DrawRectangle(frog.PosX,frog.PosY,50,50,Color.SkyBlue);
+    Raylib.DrawRectangle(frog.PosX, frog.PosY, 50, 50, Color.SkyBlue);
 
     Raylib.EndDrawing();
 }
